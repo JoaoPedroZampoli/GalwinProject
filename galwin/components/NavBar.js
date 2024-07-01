@@ -35,8 +35,8 @@ const NavBar = () => {
                 </motion.ul>
             </motion.div>
             <motion.ul variants={navAnimation} initial="initial" animate="animate">
-                <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/about">Sobre</Link></motion.li>
-                <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/contact">Contato</Link></motion.li>
+                {/* <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/about">Sobre</Link></motion.li>
+                <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/contact">Contato</Link></motion.li> */}
                 <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/login"><button>Entrar <div className={styles.arrowWrapper}><div className={styles.arrow}></div></div></button></Link></motion.li>
             </motion.ul>
         </motion.div>
