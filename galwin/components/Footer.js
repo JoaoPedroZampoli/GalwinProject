@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import "../styles/Footer.module.css";
+import "../styles/components/Footer.module.css";
 
 const Footer = () =>{
     return(

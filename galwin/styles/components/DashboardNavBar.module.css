@@ -1,0 +1,76 @@
+.navbar{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    background: #215A36;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin: 0;
+    padding: 1.5rem 2rem;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+}
+
+.navbar li{
+    list-style-type: none;
+}
+
+.centerPart{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    align-items: center;
+}
+
+.progressBar{
+    width: 60%;
+    height: 0.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.progress{
+    height: 100%;
+    background: #2a82cd;
+    border-radius: 10px;
+    transition: 0.2s width;
+}
+
+@media screen and (max-width: 1440px){
+    .centerPart{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .centerPart{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        padding: 1.25rem 1.25rem;
+    }    
+}

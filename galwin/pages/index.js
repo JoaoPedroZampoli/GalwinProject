@@ -14,8 +14,9 @@ export default function Home() {
       <AnimatePresence mode="wait">
           <motion.div className={styles.background}>
             <NavBar/>
-              <motion.div className="mainContainer">
-                <motion.h1 className={styles.landingText}>Bem-vindo à uma nova Experiência Acadêmica</motion.h1>
+              <motion.div className={styles.mainContainer}>
+                {/* <motion.h1 className={styles.landingText}>Bem-vindo à uma nova Experiência Acadêmica</motion.h1> */}
+                <motion.h1 className={styles.landingText}>Bem-vindo ao Galwin</motion.h1>
                 <motion.h2 className={styles.subLandingText}><span className={styles.gdText1}>Planeje</span>, <span className={styles.gdText2}>Descubra</span> e <span className={styles.gdText3}>Organize</span> sua trajetória na <span style={{fontFamily: "Cinzel"}}>UNIFESP</span></motion.h2>
               </motion.div>
           </motion.div>

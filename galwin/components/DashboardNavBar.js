@@ -1,8 +1,8 @@
 import {motion, Variants} from 'framer-motion';
-import styles from "../styles/components/NavBar.module.css";
+import styles from "../styles/components/DashboardNavBar.module.css";
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const navAnimation = {
     initial: {},
@@ -31,13 +31,18 @@ const NavBar = () => {
         <motion.div className={styles.navbar}>
             <motion.div whileHover={{scale: 1.0}} whileTap={{ scale: 1 }} style={{display: "Flex"}}>
                 <motion.ul variants={navAnimation} initial="initial" animate="animate">
-                    <motion.li variants={navItems} whileHover={{ scale: 1.0 }} whileTap={{ scale: 1 }}><Link href="/">Galwin</Link></motion.li>
+                    <motion.li variants={navItems} whileHover={{ scale: 1.0 }} whileTap={{ scale: 1 }}><Link href="/dashboard"><FontAwesomeIcon icon={faHouse}/></Link></motion.li>
                 </motion.ul>
             </motion.div>
+            <motion.div className={styles.centerPart} variants={navAnimation} initial="initial" animate="animate">
+                <motion.div variants={navItems}>Progresso no curso:</motion.div>
+                <motion.div className={styles.progressBar} variants={navItems}>
+                    <motion.div className={styles.progress} style={{width: "50%"}}></motion.div>
+                </motion.div>
+                <motion.div style={{marginLeft: "10px"}} variants={navItems}>50%</motion.div>
+            </motion.div>
             <motion.ul variants={navAnimation} initial="initial" animate="animate">
-                {/* <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/about">Sobre</Link></motion.li>
-                <motion.li variants={navItems} whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}><Link href="/contact">Contato</Link></motion.li> */}
-                <motion.li variants={navItems} whileHover={{ scale: 1.0 }} whileTap={{ scale: 1 }}><Link href="/login"><button>Entrar <div className={styles.arrowWrapper}><div className={styles.arrow}></div></div></button></Link></motion.li>
+                <motion.li variants={navItems} whileHover={{ scale: 1.0 }} whileTap={{ scale: 1 }}><FontAwesomeIcon icon={faBars}/></motion.li>
             </motion.ul>
         </motion.div>
     );

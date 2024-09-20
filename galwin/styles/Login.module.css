@@ -10,21 +10,29 @@
     /* background-color: #215A36;
     background-image: url("../public/images/topography.svg"); */
     /* background: radial-gradient(circle at 50% 50%,#164e86, #0b2743, #000000), url("data:image/svg+xml,%3C!-- svg: first layer --%3E%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); */
-    background: url("../public/images/Bauhaus-Style.svg");
+    /* background: url("../public/images/Bauhaus-Style.svg");
+    background-size: cover; */
+    /* background: linear-gradient(45deg, #215a36, #3b8c7a, #5fa2b3) */
+    /* background: #265a88;
+    background: -webkit-linear-gradient(315deg, #265a88 0%, #247a5b 100%);
+    background: linear-gradient(315deg, #265a88 0%, #247a5b 100%); */
+    background-image: url("../public/images/LoginBackground.svg");
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     width: 90vw;
     height: 80vh;
-    background: rgba(33, 90, 54, 0.83);
+    background: #265a88;
+    background: -webkit-linear-gradient(315deg, rgba(38, 90, 136, 0.5) 0%, rgba(36, 122, 69, 0.5) 100%);
+    background: linear-gradient(315deg, rgba(38, 90, 136, 0.5) 0%, rgba(36, 122, 69, 0.5) 100%);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
 }
 
@@ -32,6 +40,9 @@
     color: white;
     text-decoration: none;
     font-family: "Inter";
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .linkVoltar button{
@@ -97,13 +108,29 @@
 }
 
 .loginContainer{
-    margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    width: 30%;
     height: 100%;
+    margin: auto;
     color: white;
+}
+
+.loginButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #215A36;
+    border: 0;
+    border-radius: 16px;
+    padding: 16px;
+    font-size: small;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s background-color;
 }
 
 .logo{
@@ -114,4 +141,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+@media (max-width: 900px){
+    .mainContainer{
+        overflow: hidden;
+    }
+    .imageContainer{
+        display: none;
+    }
+    
+    .loginContainer{
+        width: 90%;
+    }
 }
