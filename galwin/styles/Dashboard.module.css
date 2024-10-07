@@ -5,6 +5,7 @@
 
 .mainContainer{
     display: flex;
+    flex-direction: column;
     padding: 16px;
 }
 
@@ -12,7 +13,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     margin: 0 1rem;
     color: #000000;
 }
@@ -20,4 +20,21 @@
 .greetingsText{
     font-size: 2rem;
     font-weight: 600;
+}
+
+.statsUser{
+
+}
+
+.mainBoard{
+    background: #fff;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.boardCard{
+    display: flex;
+    color: #000000;
+    border-radius: 8px;
 }
